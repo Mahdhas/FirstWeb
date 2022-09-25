@@ -1,0 +1,25 @@
+﻿@model FirstWeb.Models.Guest
+
+
+<html>  
+    <head>
+    <link href="/css/bootstrap.css" rel="stylesheet" asp-append-version="true" />
+
+    </head>
+    <body>
+
+        <div>
+            <p>
+                Thank you @Model.Name for attend
+            </p>
+
+            <a asp-action="AllGuests" >List of All GUest</a>
+            <a  asp-action ="Guest" > Back </a>
+        
+        </div>
+
+
+    </body>
+
+
+</html>
