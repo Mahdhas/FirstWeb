@@ -1,0 +1,38 @@
+﻿@model FirstWeb.Models.Guest;
+
+
+<html>
+    <head>
+    <link href="/css/bootstrap.css" rel="stylesheet" asp-append-version="true" />
+
+  
+
+  
+
+    </head>
+
+    <body>
+        <h1 class="m-2 p-2 text-white text-center bg-primary">
+            Guest Form
+        </h1>
+
+        <form  asp-action="Guest" method="post" class="m-3">
+        <div>
+            <label class="form-label" asp-for=GID></label>
+            <input class="form-control" asp-for="GID" />
+        </div>
+        <div>
+            <label class="form-label" asp-for=Name></label>
+            <input class="form-control" asp-for="Name" />
+        </div>
+     
+
+        <input type="submit" name="Add"  class="btn btn-success mt-3"/>
+
+        </form>
+    <a asp-action="Guest">Cancel</a>
+    <a asp-action="Index" class="btn btn-success"> Back to Home</a>
+
+    </body>
+
+</html>

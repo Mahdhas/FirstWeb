@@ -1,0 +1,33 @@
+﻿@model IEnumerable<FirstWeb.Models.Guest>
+<html>
+    <head>
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+    <link href="/css/bootstrap.css" rel="stylesheet" asp-append-version="true" />
+    </head>
+    <body>
+        <div class="text-center p-3"> 
+        <h2 class="text-center text-bg-primary">  Guest List</h2>
+        <table class="table table-bordered table-striped table-sm ">
+            <thead>
+                <tr>
+
+        <th> ID </th>
+                <th> Name</th>  
+                </tr>
+
+            </thead>
+            <tbody>
+
+                @foreach(var g in Model){
+                <tr>
+                    <td> @g.GID</td>
+                <td>@g.Name</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+    </div>
+        <a asp-action="index" class="btn btn-primary" > back</a>
+    </body>
+</html>
